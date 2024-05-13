@@ -28,7 +28,7 @@ def handle_form():
         return "後九個字元應為數字", 400
     
     # Step 4: 將第一個英文字母轉換為對應的數字（A為10，B為11，C為12，...，Z為33）。
-    first_char_num = ord(first_char.upper()) - ord('A') + 10
+    first_char_num = ord(id_number[0].upper()) - 55
     
     # Step 5: 將轉換後的兩位數字分別乘以1和9。
     sum_product = first_char_num * 1 + first_char_num * 9
